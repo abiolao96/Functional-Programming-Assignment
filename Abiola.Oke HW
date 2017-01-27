@@ -26,11 +26,10 @@
 ; Question 3
 
 (define ( ; only major line change((list? (car L)) (+ (sum-up-numbers-general(car L))(sum-up-numbers-general(cdr L)))) ; only major line changeum-up-numbers-general L) ;SAme as the previous function just include the numbersin the nested loops
-; using my last code as a starting point 
-(cond 
-    ((null? L) 0)
+(cond ; IF statement
+    ((null? L) 0) ; is the list is null return 0
     ((list? (car L)) (+ (sum-up-numbers-general(car L))(sum-up-numbers-general(cdr L)))) ; only major line change   
-    ((number? (car L)) (+ (car L) (sum-up-numbers-simple (cdr L)))) 
-    (else (sum-up-numbers-simple (cdr L) )
+    ((number? (car L)) (+ (car L) (sum-up-numbers-simple (cdr L))))  ; if the first element is a number add it to recursively called remainder of the list
+    (else (sum-up-numbers-simple (cdr L) ) ; if the first element is a number continue to the next elements 
   )
 ) 
