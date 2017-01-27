@@ -18,7 +18,20 @@
     ((null? L) 0) ; is the list is null return 0
     ((list?  (car L) (sum-up-numbers-simple(cdr L)))  ; if the the first element is a a list call the same function on the rest of the lsit 
     ((number? (car L)) (+ (car L) (sum-up-numbers-simple (cdr L)))) ; if the first element is a number add it to recursively called remainder of the list
-    (else L) 
+    (else (sum-up-numbers-simple (cdr L) ) ; if the first element is a number continue to the next elements 
+  )
+  
+) 
+
+; Question 3
+
+(define (sum-up-numbers-general L) ;SAme as the previous function just include the numbersin the nested loops
+; using my last code as a starting point 
+(cond 
+    ((null? L) 0)
+    ((list?  (car L) (sum-up-numbers-simple(cdr L)))   
+    ((number? (car L)) (+ (car L) (sum-up-numbers-simple (cdr L)))) 
+    (else (sum-up-numbers-simple (cdr L) )
   )
   
 ) 
