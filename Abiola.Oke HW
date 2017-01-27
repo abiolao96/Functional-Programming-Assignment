@@ -1,9 +1,18 @@
+; Question 1
+
 (define (reverse-general L) ;The purpose of this function is to reverse a list including the contents of any nested lists
-   (cond ((null? L) 0)
-          ((list? L)
-           
+   (cond ((null? L) '()) ; Checks to see if the List in Null 
+          ((list? L) ; Checks to see if the list is a list 
+            (append ((reverse-general (cdr L)) ;appends two list ... the first being a all items in the  List beside the first item put throughthe fuction recursively 
+              (list ((reverse-general (car L))) ; the second being the first item in the list recusively pass through the function and turned into a list 
              )
            )
-           (else L)
+           (else L) ; is the other conditions are not satisfied L is returned 
     )
 )
+
+; Question 2
+
+(define (sum-up-numbers-simple L) ;The purpose of this function is to iterate through a list and add up all the numbers in the list and ignore all non- numbers
+
+) 
