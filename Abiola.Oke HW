@@ -16,7 +16,7 @@
 (define (sum-up-numbers-simple L) ;The purpose of this function is to iterate through a list and add up all the numbers in the list and ignore all non- numbers
   (cond ; IF statement
     ((null? L) 0) ; is the list is null return 0
-    ((list?  (car L) 0)  ; if the the first element is a list return 0 
+    ((list?  (car L) (sum-up-numbers-simple(cdr L)))  ; if the the first element is a a list call the same function on the rest of the lsit 
     ((number? (car L)) (+ (car L) (sum-up-numbers-simple (cdr L)))) ; if the first element is a number add it to recursively called remainder of the list
     (else L) 
   )
