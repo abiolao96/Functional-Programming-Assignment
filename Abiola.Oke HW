@@ -25,13 +25,12 @@
 
 ; Question 3
 
-(define (sum-up-numbers-general L) ;SAme as the previous function just include the numbersin the nested loops
+(define ( ; only major line change((list? (car L)) (+ (sum-up-numbers-general(car L))(sum-up-numbers-general(cdr L)))) ; only major line changeum-up-numbers-general L) ;SAme as the previous function just include the numbersin the nested loops
 ; using my last code as a starting point 
 (cond 
     ((null? L) 0)
-    ((list?  (car L) (sum-up-numbers-simple(cdr L)))   
+    ((list? (car L)) (+ (sum-up-numbers-general(car L))(sum-up-numbers-general(cdr L)))) ; only major line change   
     ((number? (car L)) (+ (car L) (sum-up-numbers-simple (cdr L)))) 
     (else (sum-up-numbers-simple (cdr L) )
   )
-  
 ) 
