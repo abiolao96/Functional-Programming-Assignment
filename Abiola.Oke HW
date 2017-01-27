@@ -1,3 +1,3 @@
-(define ((reverse-general L)
+(define (reverse-general L) ;The purpose if this function is to reverse a list including the contents of any nes loops
     
 )
