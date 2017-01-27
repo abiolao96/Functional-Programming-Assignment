@@ -1,6 +1,9 @@
 (define (reverse-general L) ;The purpose of this function is to reverse a list including the contents of any nested lists
-  (cond )
-          
+   (cond ((null? L) 0)
+          ((list? L)
+           
+             )
+           )
+           (else L)
     )
-    (else L) 
 )
